@@ -1,0 +1,41 @@
+Application: EUIV 
+Version: EU4 v1.34.4.0 Sweden 
+Date/Time: 2023-01-06 13:49:37
+
+Caught signal 11 (SIGSEGV)
+
+Original Stack Trace:
+  2   eu4                                 0x0000000109beb56b _ZNK20CCultureGroupTrigger19GetCultureFromScopeER11CEventScope + 45
+  3   eu4                                 0x00000001093931bf _ZN8CCountry13SetCountryTagE11CCountryTagb + 2307
+  4   eu4                                 0x00000001097d97e7 _ZN10CGameState10ChangeTagsER11CCountryTagS1_ + 5757
+  5   eu4                                 0x00000001096b0ada _ZNK16CChangeTagEffect7ExecuteER11CEventScopei + 178
+  6   eu4                                 0x000000010969917e _ZNK7CEffect7ExecuteER11CEventScopei + 92
+  7   eu4                                 0x000000010969915b _ZNK7CEffect7ExecuteER11CEventScopei + 57
+  8   eu4                                 0x0000000109532fcd _ZNK23CExecuteDecisionCommand7ExecuteEv + 2349
+  9   eu4                                 0x000000010a540a32 _ZL18ExecuteWithPaddingPK8CCommandj + 177
+  10  eu4                                 0x000000010a540325 _ZN8CSession15ProcessCommandsEv + 547
+  11  eu4                                 0x000000010a53fa94 _ZN8CSession6UpdateEv + 328
+  12  eu4                                 0x00000001092ea0a3 _ZN15CEU4Application6UpdateEv + 109
+  13  eu4                                 0x0000000109876097 _ZN12CInGameIdler4IdleEb + 1683
+  14  eu4                                 0x000000010a4ee78a _ZN12CApplication14UpdateOneFrameEb + 288
+  15  eu4                                 0x000000010a4eec34 _ZN12CApplication3RunEv + 48
+  16  eu4                                 0x00000001098c0333 main + 10441
+  17  dyld                                0x00007ff80ca8c310 start + 2432
+
+Demangled Stack Trace:
+  2   eu4                                 0x0000000109beb56b CCultureGroupTrigger::GetCultureFromScope(CEventScope&) const + 45
+  3   eu4                                 0x00000001093931bf CCountry::SetCountryTag(CCountryTag, bool) + 2307
+  4   eu4                                 0x00000001097d97e7 CGameState::ChangeTags(CCountryTag&, CCountryTag&) + 5757
+  5   eu4                                 0x00000001096b0ada CChangeTagEffect::Execute(CEventScope&, int) const + 178
+  6   eu4                                 0x000000010969917e CEffect::Execute(CEventScope&, int) const + 92
+  7   eu4                                 0x000000010969915b CEffect::Execute(CEventScope&, int) const + 57
+  8   eu4                                 0x0000000109532fcd CExecuteDecisionCommand::Execute() const + 2349
+  9   eu4                                 0x000000010a540a32 ExecuteWithPadding(CCommand const*, unsigned int) + 177
+  10  eu4                                 0x000000010a540325 CSession::ProcessCommands()              + 547
+  11  eu4                                 0x000000010a53fa94 CSession::Update()                       + 328
+  12  eu4                                 0x00000001092ea0a3 CEU4Application::Update()                + 109
+  13  eu4                                 0x0000000109876097 CInGameIdler::Idle(bool)                 + 1683
+  14  eu4                                 0x000000010a4ee78a CApplication::UpdateOneFrame(bool)       + 288
+  15  eu4                                 0x000000010a4eec34 CApplication::Run()                      + 48
+  16  eu4                                 0x00000001098c0333 main + 10441
+  17  dyld                                0x00007ff80ca8c310 start + 2432
